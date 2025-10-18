@@ -509,6 +509,7 @@ img#site-title {
   color: #fff;
   font-size: 17px;
   font-weight: 300;
+  text-align: center;
 }
 
 .grid-gallery figcaption p {
