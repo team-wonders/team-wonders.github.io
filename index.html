@@ -42,7 +42,6 @@
 
 				<!-- Action Button -->
 				<div class="project-title-topright">
-					<h1>Wonders</h1>
 				</div>
 				<div class="hero-button">
 					<a class="btn btn-hero btn-lg" href="#contribute">Contribute</a>
@@ -98,7 +97,6 @@
 					</div>
 				</div>
 
-
 				<div class="menu">
 					<nav class="navbar navbar-wrapper">
 						<div class="container">
@@ -110,6 +108,7 @@
 							</div>
 							<div id="main-nav" class="collapse navbar-collapse">
 								<ul class="nav navbar-nav">
+									<img src="img/wonders_narrow_logo.png" style="max-width: 15%;"/>
 									<li><a href="#intro" class="scroll-link">Introduction</a></li>
 									<li><a href="#contribute" class="scroll-link">Contribute</a></li>
 									<li><a href="#aboutUs" class="scroll-link">People</a></li>
@@ -118,9 +117,10 @@
 						</div>
 					</nav>
 				</div>
+
 		</header>
 
-		<section class="service page-section" id="intro">
+		<section class="service page-section" id="intro" style="padding-bottom: 0px;">
 			<div class="container">
 				<div class="heading">
 					<h2>How well does AI understand your culture?</h2>
@@ -140,6 +140,62 @@
 							alt="Map of wonders data contributors. Created using MapChart">
 					</h3>
 				</div>
+			</div>
+		</section>
+
+
+		<section class="slideshow">
+			<ul>
+				<li>
+					<figure>
+						<img src="img/gallery/barranquilla_carnival.jpg" alt="" />
+						<figcaption>
+							<h3>Barranquilla Carnival</h3>
+							<p>The Barranquilla Carnival is one of the largest and most vibrant festivals in Colombia
+								and Latin America. Held annually in the city of Barranquilla, it is a colorful
+								celebration of Colombia’s diverse cultural heritage, blending indigenous, African, and
+								Spanish traditions.
+
+								Recognized by UNESCO as a Masterpiece of the Oral and Intangible Heritage of Humanity,
+								the carnival features lively parades, folkloric dances like cumbia, elaborate costumes,
+								traditional music, and a spirited atmosphere that takes over the city for four days
+								leading up to Ash Wednesday.
+
+								It's a joyful expression of identity, history, and community. It's a must-see event for
+								anyone wanting to experience the heart of Caribbean Colombian culture.</p>
+						</figcaption>
+					</figure>
+				</li>
+			</ul>
+			<nav>
+				<span class="icon nav-prev"></span>
+				<span class="icon nav-next"></span>
+				<span class="icon nav-close"></span>
+			</nav>
+
+		</section><!-- // end slideshow -->
+
+	</div><!-- // grid-gallery -->
+	</div>
+	</section>
+
+
+
+	<section class="contribute page-section" id="contribute" style="padding-top:0px; padding-bottom: 0px;">
+		<div class="container">
+			<div class="heading">
+				<h2>Contribute Data</h2>
+				<h3>We are collecting data via a <a href="https://huggingface.co/spaces/">public online platform</a>.
+					You can create an account to keep track of your contributions, or you can upload data as an
+					anonymous user. Ideally, we would like you to contribute your own images, or images that are freely
+					licensed. Our online platform is GDPR-ready with an automatic tool to protect individual privacy
+					with face blurring.
+					<br/><br/>
+					We will reward the best regional contributors with stickers, mugs, and t-shirts. Stay tuned for more
+					details.
+				</h3>
+
+			</div>
 				<div class="heading">
 					<h2>Categories and Concepts</h2>
 					<h3 style="border-bottom: none;">
@@ -205,62 +261,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-
-
-		<section class="slideshow">
-			<ul>
-				<li>
-					<figure>
-						<img src="img/gallery/barranquilla_carnival.jpg" alt="" />
-						<figcaption>
-							<h3>Barranquilla Carnival</h3>
-							<p>The Barranquilla Carnival is one of the largest and most vibrant festivals in Colombia
-								and Latin America. Held annually in the city of Barranquilla, it is a colorful
-								celebration of Colombia’s diverse cultural heritage, blending indigenous, African, and
-								Spanish traditions.
-
-								Recognized by UNESCO as a Masterpiece of the Oral and Intangible Heritage of Humanity,
-								the carnival features lively parades, folkloric dances like cumbia, elaborate costumes,
-								traditional music, and a spirited atmosphere that takes over the city for four days
-								leading up to Ash Wednesday.
-
-								It's a joyful expression of identity, history, and community. It's a must-see event for
-								anyone wanting to experience the heart of Caribbean Colombian culture.</p>
-						</figcaption>
-					</figure>
-				</li>
-			</ul>
-			<nav>
-				<span class="icon nav-prev"></span>
-				<span class="icon nav-next"></span>
-				<span class="icon nav-close"></span>
-			</nav>
-
-		</section><!-- // end slideshow -->
-
-	</div><!-- // grid-gallery -->
-	</div>
-	</section>
-
-
-
-	<section class="contribute page-section" id="contribute" style="padding-top:0px; padding-bottom: 0px;">
-		<div class="container">
-			<div class="heading">
-				<h2>Contribute Data</h2>
-				<h3>We are collecting data via a <a href="https://huggingface.co/spaces/">public online platform</a>.
-					You can create an account to keep track of your contributions, or you can upload data as an
-					anonymous user. Ideally, we would like you to contribute your own images, or images that are freely
-					licensed. Our online platform is GDPR-ready with an automatic tool to protect individual privacy
-					with face blurring.
-					<br/><br/>
-					We will reward the best regional contributors with stickers, mugs, and t-shirts. Stay tuned for more
-					details.
-				</h3>
-
-			</div>
 		</div>
 	</section>
 
@@ -353,20 +353,6 @@
 		<p class="text-center">
 			<a href="#header" class="gototop"><i class="fa fa-angle-double-up fa-2x"></i></a>
 		</p>
-		<!--
-	<div class="container">
-		<ul>
-			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-			<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-			<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-			<li><a href="#"><i class="fa fa-flickr"></i></a></li>
-		</ul>
-		<p>
-			&copy; 2015 Copyright Your Website Template by <a href="http://webthemez.com">Webthemez.com</a>
-		</p>
-	</div>
-	-->
 	</section>
 
 	</div><!--wrapper end-->
