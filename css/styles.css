@@ -1134,7 +1134,10 @@ blockquote footer, blockquote small, blockquote .small {
 }
 
 .faq-icon {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+  color: #333;
+	
 }
 
 .faq-answer {
@@ -1154,5 +1157,5 @@ blockquote footer, blockquote small, blockquote .small {
 }
 
 .faq-item.open .faq-icon {
-  transform: rotate(45deg);
+  transform: rotate(90deg);
 }
