@@ -1097,3 +1097,62 @@ blockquote footer, blockquote small, blockquote .small {
 .project-title-topright h1 {
   color: #fff;
 }
+
+/* FAQ section styles */
+#faq {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+#faq h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 0.5rem;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:focus {
+  outline: none;
+}
+
+.faq-icon {
+  font-size: 1.2rem;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-out;
+}
+
+.faq-answer p {
+  margin: 0 0 1rem 0;
+  padding-right: 1.5rem;
+}
+
+/* opened faq styles */
+.faq-item.open .faq-answer {
+  max-height: 200px;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
