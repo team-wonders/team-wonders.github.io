@@ -1159,3 +1159,42 @@ blockquote footer, blockquote small, blockquote .small {
 .faq-item.open .faq-icon {
   transform: rotate(90deg);
 }
+
+
+.contact-section {
+  padding: 3rem 1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  background: #111;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #333;
+}
+
+.form-response {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+
+
+
