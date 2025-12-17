@@ -486,29 +486,27 @@
 
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const faqItems = document.querySelectorAll(".faq-item");
+document.addEventListener("click", function (e) {
+  const btn = e.target.closest(".faq-question");
+  if (!btn) return;
 
-  faqItems.forEach((item) => {
-    const btn = item.querySelector(".faq-question");
-    const icon = item.querySelector(".faq-icon");
+  const item = btn.closest(".faq-item");
+  if (!item) return;
 
-    // initial state
-    btn.setAttribute("aria-expanded", "false");
+  const allItems = document.querySelectorAll(".faq-item");
 
-    btn.addEventListener("click", () => {
-      faqItems.forEach((other) => {
-        if (other !== item) {
-          other.classList.remove("open");
-          other.querySelector(".faq-question")?.setAttribute("aria-expanded", "false");
-        }
-      });
-
-      const willOpen = !item.classList.contains("open");
-      item.classList.toggle("open", willOpen);
-      btn.setAttribute("aria-expanded", willOpen ? "true" : "false");
-    });
+  // close others
+  allItems.forEach((other) => {
+    if (other !== item) {
+      other.classList.remove("open");
+      other.querySelector(".faq-question")?.setAttribute("aria-expanded", "false");
+    }
   });
+
+  // toggle this one
+  const willOpen = !item.classList.contains("open");
+  item.classList.toggle("open", willOpen);
+  btn.setAttribute("aria-expanded", willOpen ? "true" : "false");
 });
 </script>
 
