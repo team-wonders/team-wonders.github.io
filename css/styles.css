@@ -1161,7 +1161,7 @@ blockquote footer, blockquote small, blockquote .small {
 }
 
 
-/* Contact section */
+/* Contact section layout */
 .contact {
   padding: 64px 16px;
 }
@@ -1170,77 +1170,87 @@ blockquote footer, blockquote small, blockquote .small {
   max-width: 720px;
   margin: 0 auto;
   padding: 28px;
-  border: 1px solid rgba(0,0,0,0.08);
+  background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
-.contact-title {
-  text-align: center;
-  font-size: 44px;
-  margin: 0 0 10px;
-}
 
 .contact-subtitle {
   text-align: center;
   font-size: 16px;
   line-height: 1.6;
-  color: rgba(0,0,0,0.72);
-  margin: 0 0 22px;
+  color: rgba(0, 0, 0, 0.72);
+  margin-bottom: 24px;
 }
 
 .contact-subtitle a {
+  color: #1976D2;
+  font-weight: 600;
   text-decoration: none;
 }
 
+.contact-subtitle a:hover {
+  text-decoration: underline;
+}
+
+
 .contact-form {
   display: grid;
-  gap: 14px;
+  gap: 16px;
 }
 
 .field label {
   display: block;
   font-weight: 600;
   margin-bottom: 6px;
+  color: rgba(0, 0, 0, 0.75);
 }
 
 .field input,
 .field textarea {
   width: 100%;
-  padding: 12px 12px;
-  border: 1px solid rgba(0,0,0,0.18);
-  border-radius: 12px;
+  padding: 12px 14px;
   font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
   outline: none;
 }
 
-.field input:focus,
-.field textarea:focus {
-  border-color: rgba(0,0,0,0.45);
-  box-shadow: 0 0 0 4px rgba(0,0,0,0.08);
+.field textarea {
+  resize: vertical;
 }
 
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #1976D2;
+  box-shadow: 0 0 0 4px rgba(25, 118, 210, 0.15);
+}
+
+
 .contact-btn {
+  margin-top: 8px;
   padding: 12px 16px;
-  border: 0;
-  border-radius: 12px;
   font-size: 16px;
   font-weight: 700;
+  border-radius: 12px;
+  border: none;
   cursor: pointer;
-  background: #0b57d0;
-  color: #fff;
+  background: #1976D2;
+  color: #ffffff;
 }
 
 .contact-btn:hover {
-  filter: brightness(0.95);
+  background: #155fa0;
 }
+
 
 .contact-response {
-  margin-top: 6px;
+  margin-top: 8px;
   font-weight: 600;
 }
-
 
 
 
