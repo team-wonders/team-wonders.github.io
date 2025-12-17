@@ -484,31 +484,27 @@
 </section>
 
 
-
 <script>
-document.addEventListener("click", function (e) {
-  const btn = e.target.closest(".faq-question");
-  if (!btn) return;
+document.addEventListener("DOMContentLoaded", function () {
+  const faqItems = document.querySelectorAll(".faq-item");
 
-  const item = btn.closest(".faq-item");
-  if (!item) return;
+  faqItems.forEach((item) => {
+    const btn = item.querySelector(".faq-question");
 
-  const allItems = document.querySelectorAll(".faq-item");
+    btn.addEventListener("click", () => {
+      faqItems.forEach((other) => {
+        if (other !== item) {
+          other.classList.remove("open");
+        }
+      });
 
-  // close others
-  allItems.forEach((other) => {
-    if (other !== item) {
-      other.classList.remove("open");
-      other.querySelector(".faq-question")?.setAttribute("aria-expanded", "false");
-    }
+      item.classList.toggle("open");
+    });
   });
-
-  // toggle this one
-  const willOpen = !item.classList.contains("open");
-  item.classList.toggle("open", willOpen);
-  btn.setAttribute("aria-expanded", willOpen ? "true" : "false");
 });
 </script>
+
+
 
 
 
