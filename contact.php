@@ -20,7 +20,7 @@ if (!$comment) $errors[count($errors)] = 'Please enter your message.';
 if (!$errors) {
 
 	//recipient - replace your email here
-	$to = 'samson3d@gmail.com';	
+	$to = 'wonders-team@googlegroups.com';	
 	//sender - from the form
 	$from = $name . ' <' . $email . '>';
 	
@@ -35,7 +35,7 @@ if (!$errors) {
 	
 	//if POST was used, display the message straight away
 	if ($_POST) {
-		if ($result) echo 'Thank you! We have received your message.';
+		if ($result) echo 'Thank you! We have received your message and will get back to you soon';
 		else echo 'Sorry, unexpected error. Please try again later';
 		
 	//else if GET was used, return the boolean value so that 
