@@ -1151,13 +1151,13 @@ blockquote footer, blockquote small, blockquote .small {
 }
 
 /* Open state */
-.faq-item.active .faq-answer {
+.faq-item.open .faq-answer {
   max-height: 300px;
   opacity: 1;
   padding-bottom: 16px;
 }
 
-.faq-item.active .faq-icon {
+.faq-item.open .faq-icon {
   transform: rotate(90deg);
 }
 
