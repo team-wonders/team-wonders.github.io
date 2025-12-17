@@ -424,26 +424,6 @@
 
     <!--faq-->
 
-<script>
-document.querySelectorAll(".faq-question").forEach(button => {
-  button.addEventListener("click", () => {
-    const item = button.closest(".faq-item");
-    const expanded = button.getAttribute("aria-expanded") === "true";
-
-    document.querySelectorAll(".faq-item").forEach(i => {
-      i.classList.remove("active");
-      i.querySelector(".faq-question").setAttribute("aria-expanded", "false");
-    });
-
-    if (!expanded) {
-      item.classList.add("active");
-      button.setAttribute("aria-expanded", "true");
-    }
-  });
-});
-</script>
-
-
 
 <section id="contact" class="contact">
   <div class="contact-wrap">
@@ -504,7 +484,39 @@ document.querySelectorAll(".faq-question").forEach(button => {
 </section>
 
 
-    
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach((item) => {
+    const btn = item.querySelector(".faq-question");
+    const icon = item.querySelector(".faq-icon");
+
+    // initial state
+    btn.setAttribute("aria-expanded", "false");
+
+    btn.addEventListener("click", () => {
+      faqItems.forEach((other) => {
+        if (other !== item) {
+          other.classList.remove("open");
+          other.querySelector(".faq-question")?.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      const willOpen = !item.classList.contains("open");
+      item.classList.toggle("open", willOpen);
+      btn.setAttribute("aria-expanded", willOpen ? "true" : "false");
+    });
+  });
+});
+</script>
+
+
+
+
+
+	
 	
 	<!--footer-->
 	<section class="footer" id="footer">
