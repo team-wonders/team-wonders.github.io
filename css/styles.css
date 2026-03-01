@@ -1254,4 +1254,8 @@ blockquote footer, blockquote small, blockquote .small {
 }
 
 
-
+.people-group-title {
+  text-align: center;
+  margin-top: 10px;   /* reduce space above */
+  margin-bottom: 20px;
+}
