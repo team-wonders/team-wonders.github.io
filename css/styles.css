@@ -1272,3 +1272,9 @@ blockquote footer, blockquote small, blockquote .small {
   filter: grayscale(0%);
   opacity: 1;
 }
+
+.grid-wrap {
+  clear: both;
+  width: 100%;
+  display: block;
+}
