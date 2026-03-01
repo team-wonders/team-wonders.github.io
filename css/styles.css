@@ -1259,3 +1259,15 @@ blockquote footer, blockquote small, blockquote .small {
   margin-top: 10px;   /* reduce space above */
   margin-bottom: 20px;
 }
+
+.partners-logos img {
+  max-height: 80px;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.partners-logos img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
