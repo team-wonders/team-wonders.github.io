@@ -1265,6 +1265,7 @@ blockquote footer, blockquote small, blockquote .small {
   filter: grayscale(100%);
   opacity: 0.8;
   transition: all 0.3s ease;
+  margin-bottom: 60px; 
 }
 
 .partners-logos img:hover {
