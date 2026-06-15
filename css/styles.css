@@ -500,7 +500,7 @@ img#site-title {
 .grid-gallery figure img {
   display: block;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  heigt: auto;
   object-fit: cover;
   display: block;
 }
