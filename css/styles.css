@@ -525,7 +525,7 @@ img#site-title {
 }
 
 .grid li {
-  width: 16%;
+  width: 25%;
   float: left;
   cursor: pointer;
 }
