@@ -500,6 +500,9 @@ img#site-title {
 .grid-gallery figure img {
   display: block;
   width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
 }
 
 .grid-gallery figcaption h3 {
