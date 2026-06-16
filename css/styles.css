@@ -500,7 +500,6 @@ img#site-title {
 .grid-gallery figure img {
   display: block;
   width: 100%;
-  height: auto;
 }
 
 .grid-gallery figcaption h3 {
@@ -522,19 +521,15 @@ img#site-title {
 }
 
 .grid {
-  display: flex;
-  flex-wrap: wrap;
   margin: 0 auto;
-  padding: 0;
 }
 	
 }
 
 .grid li {
   width: 16%;
- /* float: left;*/
+  float: left;
   cursor: pointer;
-  list-style: none;
 }
 
 .grid figure {
