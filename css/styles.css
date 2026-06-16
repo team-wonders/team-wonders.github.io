@@ -541,6 +541,13 @@ img#site-title {
   opacity: 0.7;
 }
 
+.grid::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
 .grid figcaption {
   background: #0D2240;
   padding: 12px 18px;
