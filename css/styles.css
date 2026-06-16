@@ -500,8 +500,6 @@ img#site-title {
 .grid-gallery figure img {
   display: block;
   width: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .grid-gallery figcaption h3 {
@@ -524,10 +522,6 @@ img#site-title {
 
 .grid {
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
 	
 }
 
