@@ -1308,13 +1308,6 @@ blockquote footer, blockquote small, blockquote .small {
 
 
 
-
-
-/* =====================================================
-   WONDERS EXAMPLE IMAGE GALLERY
-   Everything is scoped to .example-gallery
-   ===================================================== */
-
 .example-gallery {
   padding: 70px 0;
   background: #f8fbff;
@@ -1322,33 +1315,21 @@ blockquote footer, blockquote small, blockquote .small {
   font-family: inherit;
 }
 
-
-/* WEBSITE FONT */
-
-.example-gallery h2,
-.example-gallery p,
-.example-gallery span {
-  font-family: inherit;
-}
-
-
-/* HEADER */
-
-.example-gallery .example-gallery-header {
+.example-gallery-header {
   max-width: 900px;
   margin: 0 auto 40px;
   padding: 0 24px;
   text-align: center;
 }
 
-.example-gallery .example-gallery-header h2 {
+.example-gallery-header h2 {
   margin: 0 0 16px;
   font-size: 2.4rem;
   font-weight: 700;
   color: #1976d2;
 }
 
-.example-gallery .example-gallery-header p {
+.example-gallery-header p {
   margin: 0 auto;
   max-width: 760px;
   font-size: 1.05rem;
@@ -1357,22 +1338,21 @@ blockquote footer, blockquote small, blockquote .small {
 }
 
 
-/* =====================================================
-   SLIDER WRAPPER
-   ===================================================== */
+/* SLIDER */
 
-.example-gallery .slider-wrapper {
+.slider-wrapper {
   width: 100%;
   overflow: hidden;
   position: relative;
   padding: 10px 0 25px;
 }
 
-
-/* FADE ON SIDES */
-
-.example-gallery .slider-wrapper::before,
-.example-gallery .slider-wrapper::after {
+/*
+Fade the far left/right edges slightly.
+Optional, but gives it a polished appearance.
+*/
+.slider-wrapper::before,
+.slider-wrapper::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1382,9 +1362,8 @@ blockquote footer, blockquote small, blockquote .small {
   pointer-events: none;
 }
 
-.example-gallery .slider-wrapper::before {
+.slider-wrapper::before {
   left: 0;
-
   background: linear-gradient(
     to right,
     #f8fbff 0%,
@@ -1392,9 +1371,8 @@ blockquote footer, blockquote small, blockquote .small {
   );
 }
 
-.example-gallery .slider-wrapper::after {
+.slider-wrapper::after {
   right: 0;
-
   background: linear-gradient(
     to left,
     #f8fbff 0%,
@@ -1402,129 +1380,71 @@ blockquote footer, blockquote small, blockquote .small {
   );
 }
 
-
-/* =====================================================
-   SLIDER TRACK
-   ===================================================== */
-
-.example-gallery .slider-track {
+.slider-track {
   display: flex;
-  align-items: stretch;
   gap: 24px;
-
   width: max-content;
-
-  animation: wondersSlideExamples 38s linear infinite;
-
-  will-change: transform;
+  animation: slideExamples 38s linear infinite;
 }
 
-
-/* PAUSE WHEN HOVERING */
-
-.example-gallery .slider-wrapper:hover .slider-track {
+/* Pause when someone hovers over the examples */
+.slider-wrapper:hover .slider-track {
   animation-play-state: paused;
 }
 
 
-/* =====================================================
-   CARDS
-   ===================================================== */
+/* CARD */
 
-.example-gallery .example-card {
-  display: block;
-
+.example-card {
   width: 330px;
-  min-width: 330px;
-  flex: 0 0 330px;
-
-  background: #ffffff;
-
+  flex: 0 0 auto;
+  background: white;
   border-radius: 16px;
-
   overflow: hidden;
-
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(25, 118, 210, 0.08);
-
-  box-shadow:
-    0 8px 28px rgba(0, 0, 0, 0.08);
-
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
 
-
-.example-gallery .example-card:hover {
+.example-card:hover {
   transform: translateY(-5px);
-
-  box-shadow:
-    0 12px 35px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.13);
 }
 
-
-/* =====================================================
-   IMAGES
-   ===================================================== */
-
-.example-gallery .example-card img {
+.example-card img {
   display: block;
-
   width: 100%;
-  max-width: 100%;
-
   height: 215px;
-
   object-fit: cover;
-  object-position: center;
-
-  opacity: 1;
-  visibility: visible;
 }
 
-
-/* =====================================================
-   CARD CONTENT
-   ===================================================== */
-
-.example-gallery .example-card-content {
-  display: block;
+.example-card-content {
   padding: 20px;
 }
 
-.example-gallery .example-card-content p {
+.example-card-content p {
   margin: 10px 0 0;
-
   font-size: 0.94rem;
   line-height: 1.6;
-
   color: #333;
 }
 
-
-/* SMALL CATEGORY TAG */
-
-.example-gallery .example-tag {
+.example-tag {
   display: inline-block;
-
   padding: 5px 11px;
-
   border-radius: 999px;
-
   background: #eaf4ff;
   color: #1976d2;
-
   font-size: 0.76rem;
   font-weight: 600;
 }
 
 
-/* =====================================================
-   MOVEMENT
-   ===================================================== */
+/* MOVEMENT */
 
-@keyframes wondersSlideExamples {
-
+@keyframes slideExamples {
   from {
     transform: translateX(0);
   }
@@ -1532,95 +1452,63 @@ blockquote footer, blockquote small, blockquote .small {
   to {
     transform: translateX(calc(-50% - 12px));
   }
-
 }
 
 
-/* =====================================================
-   TIP
-   ===================================================== */
+/* TIP */
 
-.example-gallery .contribution-tip {
+.contribution-tip {
   max-width: 850px;
-
   margin: 25px auto 0;
-
   padding: 0 24px;
-
   text-align: center;
-
   color: #555;
-
   font-size: 0.95rem;
   line-height: 1.6;
 }
 
 
-/* =====================================================
-   MOBILE
-   ===================================================== */
+/* MOBILE */
 
 @media (max-width: 768px) {
-
   .example-gallery {
     padding: 50px 0;
   }
 
-
-  .example-gallery .example-gallery-header {
-    margin-bottom: 30px;
-  }
-
-
-  .example-gallery .example-gallery-header h2 {
+  .example-gallery-header h2 {
     font-size: 1.9rem;
   }
 
-
-  .example-gallery .example-card {
+  .example-card {
     width: 280px;
-    min-width: 280px;
-    flex: 0 0 280px;
   }
 
-
-  .example-gallery .example-card img {
+  .example-card img {
     height: 185px;
   }
 
-
-  .example-gallery .slider-track {
-    gap: 18px;
-
+  .slider-track {
     animation-duration: 30s;
   }
 
-
-  .example-gallery .slider-wrapper::before,
-  .example-gallery .slider-wrapper::after {
+  .slider-wrapper::before,
+  .slider-wrapper::after {
     width: 35px;
   }
-
 }
 
 
-/* ======
-   ACCESSIBILITY= */
-
+/* Accessibility:
+stop the animation for users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
-
-  .example-gallery .slider-track {
+  .slider-track {
     animation: none;
-    transform: none;
   }
 
-
-  .example-gallery .slider-wrapper {
+  .slider-wrapper {
     overflow-x: auto;
   }
-
 }
-
 
 
 
