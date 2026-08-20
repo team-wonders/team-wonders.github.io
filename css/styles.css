@@ -1286,3 +1286,244 @@ blockquote footer, blockquote small, blockquote .small {
   width: 100%;
   display: block;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.example-gallery {
+  padding: 70px 0;
+  background: #f8fbff;
+  overflow: hidden;
+}
+
+.example-gallery-header {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.example-gallery-header h2 {
+  margin: 0 0 16px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1976d2;
+}
+
+.example-gallery-header p {
+  margin: 0 auto;
+  max-width: 760px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+
+/* SLIDER */
+
+.slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0 25px;
+}
+
+/*
+Fade the far left/right edges slightly.
+Optional, but gives it a polished appearance.
+*/
+.slider-wrapper::before,
+.slider-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.slider-wrapper::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    #f8fbff 0%,
+    rgba(248, 251, 255, 0) 100%
+  );
+}
+
+.slider-wrapper::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    #f8fbff 0%,
+    rgba(248, 251, 255, 0) 100%
+  );
+}
+
+.slider-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: slideExamples 38s linear infinite;
+}
+
+/* Pause when someone hovers over the examples */
+.slider-wrapper:hover .slider-track {
+  animation-play-state: paused;
+}
+
+
+/* CARD */
+
+.example-card {
+  width: 330px;
+  flex: 0 0 auto;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(25, 118, 210, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.example-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.13);
+}
+
+.example-card img {
+  display: block;
+  width: 100%;
+  height: 215px;
+  object-fit: cover;
+}
+
+.example-card-content {
+  padding: 20px;
+}
+
+.example-card-content p {
+  margin: 10px 0 0;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.example-tag {
+  display: inline-block;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: #eaf4ff;
+  color: #1976d2;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+
+/* MOVEMENT */
+
+@keyframes slideExamples {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 12px));
+  }
+}
+
+
+/* TIP */
+
+.contribution-tip {
+  max-width: 850px;
+  margin: 25px auto 0;
+  padding: 0 24px;
+  text-align: center;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .example-gallery {
+    padding: 50px 0;
+  }
+
+  .example-gallery-header h2 {
+    font-size: 1.9rem;
+  }
+
+  .example-card {
+    width: 280px;
+  }
+
+  .example-card img {
+    height: 185px;
+  }
+
+  .slider-track {
+    animation-duration: 30s;
+  }
+
+  .slider-wrapper::before,
+  .slider-wrapper::after {
+    width: 35px;
+  }
+}
+
+
+/* Accessibility:
+stop the animation for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .slider-track {
+    animation: none;
+  }
+
+  .slider-wrapper {
+    overflow-x: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
