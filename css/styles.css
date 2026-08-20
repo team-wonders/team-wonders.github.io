@@ -1309,15 +1309,21 @@ blockquote footer, blockquote small, blockquote .small {
 
 
 
+
 .example-gallery {
   padding: 70px 0;
   background: #f8fbff;
   overflow: hidden;
+
+  /* Inherit the site's existing font */
+  font-family: inherit;
 }
 
-.example-gallery,
-.example-gallery * {
-  font-family: inherit !important;
+/* Only text elements inherit the website font */
+.example-gallery h2,
+.example-gallery p,
+.example-gallery span {
+  font-family: inherit;
 }
 
 .example-gallery-header {
@@ -1353,7 +1359,7 @@ blockquote footer, blockquote small, blockquote .small {
 }
 
 
-/* Fade the far left/right edges slightly */
+/* FADE ON LEFT AND RIGHT EDGES */
 
 .slider-wrapper::before,
 .slider-wrapper::after {
@@ -1389,13 +1395,15 @@ blockquote footer, blockquote small, blockquote .small {
 
 .slider-track {
   display: flex;
+  align-items: stretch;
   gap: 24px;
   width: max-content;
   animation: slideExamples 38s linear infinite;
+  will-change: transform;
 }
 
 
-/* Pause animation on hover */
+/* PAUSE WHEN HOVERING */
 
 .slider-wrapper:hover .slider-track {
   animation-play-state: paused;
@@ -1406,22 +1414,19 @@ blockquote footer, blockquote small, blockquote .small {
 
 .example-card {
   width: 330px;
-  flex: 0 0 auto;
-  background: white;
+  flex: 0 0 330px;
+  background: #ffffff;
   border-radius: 16px;
   overflow: hidden;
+  border: 1px solid rgba(25, 118, 210, 0.08);
 
   box-shadow:
     0 8px 28px rgba(0, 0, 0, 0.08);
-
-  border:
-    1px solid rgba(25, 118, 210, 0.08);
 
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
-
 
 .example-card:hover {
   transform: translateY(-5px);
@@ -1438,6 +1443,7 @@ blockquote footer, blockquote small, blockquote .small {
   width: 100%;
   height: 215px;
   object-fit: cover;
+  object-position: center;
 }
 
 
@@ -1447,7 +1453,6 @@ blockquote footer, blockquote small, blockquote .small {
   padding: 20px;
 }
 
-
 .example-card-content p {
   margin: 10px 0 0;
   font-size: 0.94rem;
@@ -1456,27 +1461,22 @@ blockquote footer, blockquote small, blockquote .small {
 }
 
 
-/* SMALL CATEGORY LABEL */
+/* SMALL LABEL */
 
 .example-tag {
   display: inline-block;
-
   padding: 5px 11px;
-
   border-radius: 999px;
-
   background: #eaf4ff;
   color: #1976d2;
-
   font-size: 0.76rem;
   font-weight: 600;
 }
 
 
-/* SLIDING ANIMATION */
+/* MOVEMENT */
 
 @keyframes slideExamples {
-
   from {
     transform: translateX(0);
   }
@@ -1484,7 +1484,6 @@ blockquote footer, blockquote small, blockquote .small {
   to {
     transform: translateX(calc(-50% - 12px));
   }
-
 }
 
 
@@ -1492,15 +1491,10 @@ blockquote footer, blockquote small, blockquote .small {
 
 .contribution-tip {
   max-width: 850px;
-
   margin: 25px auto 0;
-
   padding: 0 24px;
-
   text-align: center;
-
   color: #555;
-
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -1509,53 +1503,59 @@ blockquote footer, blockquote small, blockquote .small {
 /* MOBILE */
 
 @media (max-width: 768px) {
-
   .example-gallery {
     padding: 50px 0;
   }
 
+  .example-gallery-header {
+    margin-bottom: 30px;
+  }
 
   .example-gallery-header h2 {
     font-size: 1.9rem;
   }
 
-
   .example-card {
     width: 280px;
+    flex-basis: 280px;
   }
-
 
   .example-card img {
     height: 185px;
   }
 
-
   .slider-track {
+    gap: 18px;
     animation-duration: 30s;
   }
-
 
   .slider-wrapper::before,
   .slider-wrapper::after {
     width: 35px;
   }
-
 }
-/* ACCESSIBILITY:
-   Stop animation for users who prefer reduced motion */
+
+
+/* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
-
   .slider-track {
     animation: none;
+    transform: none;
   }
-
 
   .slider-wrapper {
     overflow-x: auto;
   }
-
 }
+
+
+
+
+
+
+
+
 
 
 
