@@ -192,7 +192,7 @@ img {
 .fade-carousel .slides .slide-1, 
 .fade-carousel .slides .slide-2,
 .fade-carousel .slides .slide-3 {
-  height: 100vh;
+  height: 380px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -209,6 +209,28 @@ img {
 .fade-carousel .slides .slide-3 {
   background-image: url('../img/slide3.jpg');
 }
+
+/* Slide images media sizes - responsiveness */
+
+@media screen and (max-width: 768px) {
+  .fade-carousel .slides .slide-1, 
+  .fade-carousel .slides .slide-2,
+  .fade-carousel .slides .slide-3 {
+    height: 260px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .fade-carousel .slides .slide-1, 
+  .fade-carousel .slides .slide-2,
+  .fade-carousel .slides .slide-3 {
+    height: 220px;
+  }
+}
+
+
+
+
 
 
 
