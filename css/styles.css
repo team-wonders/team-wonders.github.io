@@ -151,6 +151,19 @@ img {
     border-color: #2196F3;
 }
 
+@media screen and (max-width: 768px) {
+  .hero-button {
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    text-align: center;
+  }
+
+  .hero-button .btn-hero {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}
 
 .hero-slide-image {
     width: 100%;
