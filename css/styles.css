@@ -41,12 +41,12 @@ img {
 /********************************/
 .fade-carousel {
   position: relative;
-  height: 100vh;
+  height: 380px;
   bottom: 65px;
 }
 
 .fade-carousel .carousel-inner .item {
-  height: 100vh;
+  height: 380px;
 }
 
 .fade-carousel .carousel-indicators > li {
@@ -213,6 +213,8 @@ img {
 /* Slide images media sizes - responsiveness */
 
 @media screen and (max-width: 768px) {
+  .fade-carousel,
+  .fade-carousel .carousel-inner .item,
   .fade-carousel .slides .slide-1, 
   .fade-carousel .slides .slide-2,
   .fade-carousel .slides .slide-3 {
