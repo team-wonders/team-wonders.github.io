@@ -41,12 +41,12 @@ img {
 /********************************/
 .fade-carousel {
   position: relative;
-  height: 480px;
+  height: 550px;
   bottom: 65px;
 }
 
 .fade-carousel .carousel-inner .item {
-  height: 480px;
+  height: 550px;
 }
 
 .fade-carousel .carousel-indicators > li {
@@ -205,7 +205,7 @@ img {
 .fade-carousel .slides .slide-1, 
 .fade-carousel .slides .slide-2,
 .fade-carousel .slides .slide-3 {
-  height: 480px;
+  height: 550px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
