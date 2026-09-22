@@ -622,12 +622,12 @@ img#site-title {
 }
 
 .slideshow li {
-  width: 660px;
+  width: 520px;
   height: auto;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -280px 0 0 -330px;
+  margin: -220px 0 0 -260px;
   visibility: hidden;
 }
 
@@ -661,6 +661,13 @@ img#site-title {
   border: 16px solid #fff;
   overflow: hidden;
 }
+
+.slideshow figure img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
 
 .slideshow figcaption {
   padding-bottom: 20px;
@@ -1533,7 +1540,22 @@ stop the animation for users who prefer reduced motion */
 }
 
 
+@media screen and (max-width: 768px) {
+  .slideshow li {
+    width: 90%;
+    margin-left: -45%;
+  }
 
+  .slideshow figure img {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slideshow figure img {
+    height: 160px;
+  }
+}
 
 
 
