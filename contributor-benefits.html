@@ -173,6 +173,258 @@
 
 
 
+<style>
+/* Contributor Benefits — scoped styling */
+.wonders-benefits {
+    padding: 65px 0;
+}
+
+.wonders-benefits .benefits-intro {
+    max-width: 800px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.wonders-benefits .section-title {
+    text-align: center;
+    margin: 50px 0 25px;
+}
+
+.wonders-benefits .reward-grid,
+.wonders-benefits .points-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.wonders-benefits .reward-card,
+.wonders-benefits .points-card {
+    background: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 14px;
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+    transition: transform .2s, box-shadow .2s;
+}
+
+.wonders-benefits .reward-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(0,0,0,.12);
+}
+
+.wonders-benefits .reward-card {
+    border-top: 5px solid var(--tier-color);
+}
+
+.wonders-benefits .reward-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.wonders-benefits .reward-card h3 {
+    font-size: 21px;
+    margin: 10px 0;
+}
+
+.wonders-benefits .point-range {
+    font-weight: 700;
+    color: var(--tier-color);
+    margin-bottom: 14px;
+}
+
+.wonders-benefits .reward-detail {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.wonders-benefits .points-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+}
+
+.wonders-benefits .points-card h3 {
+    font-size: 18px;
+}
+
+.wonders-benefits .benefits-cta {
+    text-align: center;
+    padding: 45px 20px;
+    margin-top: 45px;
+    background: #f6f7f8;
+    border-radius: 14px;
+}
+
+.wonders-benefits .benefits-button {
+    display: inline-block;
+    padding: 13px 30px;
+    margin-top: 15px;
+    background: #333;
+    color: white;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+.wonders-benefits .benefits-button:hover {
+    background: #555;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .wonders-benefits {
+        padding: 35px 0;
+    }
+}
+</style>
+
+<section class="service page-section wonders-benefits"
+         id="contributor-benefits">
+
+    <div class="container">
+
+        <!-- INTRODUCTION -->
+        <div class="heading benefits-intro">
+            <h2>Every Contribution Counts!</h2>
+            <h3>
+                At WONDERS, every image and caption helps
+                build a richer understanding of cultures
+                around the world.
+
+                We appreciate the time, creativity, and care
+                our community brings to this mission.
+
+                Discover how we recognise and celebrate
+                your contributions!
+            </h3>
+        </div>
+
+        <!-- REWARD LEVELS -->
+        <h2 class="section-title">
+            Your Contribution Journey
+        </h2>
+
+        <div class="reward-grid">
+
+            <div class="reward-card"
+                 style="--tier-color:#309866;">
+                <div class="reward-icon">🌱</div>
+                <h3>Supporter</h3>
+                <div class="point-range">1–49 Points</div>
+                <p class="reward-detail">
+                    Start your journey with WONDERS!
+                    <br><strong>Reward:</strong>
+                    Thank-you and acknowledgement email.
+                </p>
+            </div>
+
+            <div class="reward-card"
+                 style="--tier-color:#287fce;">
+                <div class="reward-icon">⭐</div>
+                <h3>Contributor</h3>
+                <div class="point-range">50–99 Points</div>
+                <p class="reward-detail">
+                    Your contributions are making a difference.
+                    <br><strong>Reward:</strong>
+                    Name listed on the dataset website.
+                </p>
+            </div>
+
+            <div class="reward-card"
+                 style="--tier-color:#e9902b;">
+                <div class="reward-icon">🏅</div>
+                <h3>Key Contributor</h3>
+                <div class="point-range">100–149 Points</div>
+                <p class="reward-detail">
+                    Your dedication deserves recognition.
+                    <br><strong>Reward:</strong>
+                    Website recognition and WONDERS stickers.
+                </p>
+            </div>
+
+            <div class="reward-card"
+                 style="--tier-color:#9848b8;">
+                <div class="reward-icon">🏆</div>
+                <h3>Champion</h3>
+                <div class="point-range">150–249 Points</div>
+                <p class="reward-detail">
+                    You're helping our community grow!
+                    <br><strong>Reward:</strong>
+                    WONDERS coffee mug.
+                </p>
+            </div>
+
+            <div class="reward-card"
+                 style="--tier-color:#de4848;">
+                <div class="reward-icon">👑</div>
+                <h3>Elite Contributor</h3>
+                <div class="point-range">250+ Points</div>
+                <p class="reward-detail">
+                    Celebrate your outstanding contributions.
+                    <br><strong>Rewards:</strong>
+                    WONDERS T-shirt, top contributor
+                    recognition and social media spotlight.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- SCORING RULES -->
+        <h2 class="section-title">
+            How Do You Earn Points?
+        </h2>
+
+        <div class="points-grid">
+
+            <div class="points-card">
+                <div class="points-value">+1</div>
+                <h3>Every Valid Sample</h3>
+                <p>Earn one point for each valid
+                   image-caption sample.</p>
+            </div>
+
+            <div class="points-card">
+                <div class="points-value">+5</div>
+                <h3>Milestone Bonus</h3>
+                <p>Receive five bonus points for
+                   every 50 samples submitted.</p>
+            </div>
+
+            <div class="points-card">
+                <div class="points-value">+2</div>
+                <h3>Daily Streak</h3>
+                <p>Submit at least five samples daily
+                   for three consecutive days.
+                   Awarded once per qualifying streak.</p>
+            </div>
+
+            <div class="points-card">
+                <div class="points-value">+10</div>
+                <h3>Weekly Warrior</h3>
+                <p>Earn ten bonus points when you
+                   contribute more than 50 samples
+                   in one week.</p>
+            </div>
+
+        </div>
+
+        <!-- CALL TO ACTION -->
+        <div class="benefits-cta">
+            <h2>Ready to Make Your Mark?</h2>
+            <p>
+                Every contribution helps AI better
+                understand the diversity of our world.
+            </p>
+
+            <a href="index.html#contribute"
+               class="benefits-button">
+                Start Contributing
+            </a>
+        </div>
+
+    </div>
+</section>
+
 
 
 
