@@ -483,6 +483,215 @@ img {
   color: #fff;
 }
 
+
+/* =======================================
+   WONDERS FLOATING LEADERBOARD
+   ======================================= */
+
+#bs-carousel {
+    position: relative;
+}
+
+/* Glass panel */
+
+.wonders-floating-leaderboard {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+
+    width: 330px;
+    max-width: 90%;
+    padding: 22px 18px;
+
+    background: rgba(16, 22, 35, 0.58);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255,255,255,0.28);
+    border-radius: 16px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.18);
+
+    color: white;
+    z-index: 5;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Header */
+
+.wonders-floating-leaderboard
+.mini-leaderboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #e2eaf3;
+}
+
+.wonders-floating-leaderboard
+.leaderboard-status {
+    color: #92e4d4;
+    letter-spacing: 0;
+}
+
+.wonders-floating-leaderboard h2 {
+    color: #fff;
+    font-size: 27px;
+    margin: 12px 0 22px;
+}
+
+/* Four compact columns */
+
+.wonders-floating-leaderboard
+.mini-leaderboard-columns,
+.wonders-floating-leaderboard
+.mini-leaderboard-row {
+    display: grid;
+
+    grid-template-columns: 35px 95px 65px 45px;
+
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.wonders-floating-leaderboard
+.mini-leaderboard-columns {
+    font-size: 10px;
+    color: #ccd8e4;
+
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.wonders-floating-leaderboard
+.mini-leaderboard-row {
+    padding: 12px 0;
+    font-size: 12px;
+    color: white;
+
+    border-bottom: 1px solid rgba(255,255,255,0.13);
+}
+
+.wonders-floating-leaderboard
+.mini-leaderboard-row strong {
+    color: white;
+    font-weight: 700;
+}
+
+/* Numeric column alignment */
+
+.wonders-floating-leaderboard
+.mini-leaderboard-columns span:nth-child(3),
+.wonders-floating-leaderboard
+.mini-leaderboard-columns span:nth-child(4),
+.wonders-floating-leaderboard
+.mini-leaderboard-row span:nth-child(3),
+.wonders-floating-leaderboard
+.mini-leaderboard-row strong {
+    text-align: right;
+}
+
+/* Scrollable area */
+
+.wonders-floating-leaderboard
+.mini-leaderboard-scroll {
+    max-height: 245px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #8296aa transparent;
+}
+
+.wonders-floating-leaderboard
+.mini-leaderboard-scroll::-webkit-scrollbar {
+    width: 5px;
+}
+
+.wonders-floating-leaderboard
+.mini-leaderboard-scroll::-webkit-scrollbar-thumb {
+    background: #8296aa;
+    border-radius: 10px;
+}
+
+/* Buttons */
+
+.wonders-floating-leaderboard
+.mini-leaderboard-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.wonders-floating-leaderboard
+.mini-leaderboard-actions a {
+    flex: 1;
+    display: block;
+
+    padding: 11px 8px;
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: 7px;
+    background: #ee895d;
+    color: #172331;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.wonders-floating-leaderboard
+.mini-leaderboard-actions a:last-child {
+    background: #85dce5;
+}
+
+.wonders-floating-leaderboard
+.mini-leaderboard-actions a:hover {
+    opacity: 0.88;
+}
+
+/* Responsive layout */
+
+@media (max-width: 767px) {
+    .wonders-floating-leaderboard {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+
+        width: 330px;
+        max-width: calc(100% - 30px);
+        margin: 20px auto;
+        padding: 20px 12px;
+
+        background: rgba(16,22,35,0.92);
+    }
+}
+
+@media (max-width: 340px) {
+    .wonders-floating-leaderboard
+    .mini-leaderboard-columns,
+    .wonders-floating-leaderboard
+    .mini-leaderboard-row {
+        grid-template-columns: 30px 78px 55px 40px;
+        gap: 5px;
+    }
+}
+
+
+
+
+
+
+
+
 .stuckMenu {
   -o-transition: all .5s;
   -ms-transition: all .5s;
