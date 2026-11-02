@@ -481,6 +481,120 @@ img {
 }
 
 
+
+/* =========================================
+   WONDERS LEADERBOARD DASHBOARD PAGE
+   ========================================= */
+
+.wonders-dashboard-page {
+    background: #f7f9fc;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Dashboard immediately below navigation */
+
+.wonders-dashboard-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+/* Embedded Hugging Face dashboard */
+
+.wonders-dashboard-container iframe {
+    display: block;
+    width: 100%;
+    height: 1000px;
+    border: none;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+/* Contribution section */
+
+.wonders-dashboard-contribute {
+    text-align: center;
+    padding: 65px 20px 75px;
+    background: #172331;
+    color: white;
+}
+
+.wonders-dashboard-contribute h2 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 18px;
+}
+
+.wonders-dashboard-contribute p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #dce8f2;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* Contribute button */
+
+.wonders-dashboard-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    border-radius: 8px;
+
+    background: #85dce5;
+    color: #172331 !important;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none !important;
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.wonders-dashboard-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(133,220,229,0.45);
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 767px) {
+    .wonders-dashboard-container {
+        padding: 10px;
+    }
+
+    .wonders-dashboard-container iframe {
+        height: 1100px;
+        border-radius: 8px;
+    }
+
+    .wonders-dashboard-contribute {
+        padding: 45px 20px;
+    }
+
+    .wonders-dashboard-contribute h2 {
+        font-size: 26px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wonders-dashboard-btn {
+        transition: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 /* =======================================
    WONDERS FLOATING LEADERBOARD
    ======================================= */
